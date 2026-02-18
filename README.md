@@ -1,38 +1,41 @@
 # 🛒 SalesSavvy
 
-SalesSavvy is a full-stack eCommerce application built using **Spring Boot**, **React**, and **MySQL**.  
-The system follows a REST-based architecture and is fully containerized using **Docker** and orchestrated with **Docker Compose** for seamless multi-container deployment.
+> A Full-Stack eCommerce Application built with Spring Boot, React & Docker
 
-It demonstrates real-world eCommerce functionality including authentication, cart management, payment integration, admin analytics, and cloud storage integration.
+SalesSavvy is a production-style eCommerce platform built using **Spring Boot (Java 17)**, **React (Vite)**, and **MySQL**.  
+The application follows a REST-based layered architecture and is fully containerized using **Docker** and orchestrated via **Docker Compose**.
+
+It includes authentication, cart management, payment integration, admin analytics, and AWS cloud storage integration.
 
 ---
 
 ## 🚀 Tech Stack
 
-- **Backend:** Spring Boot (Java 17)
-- **Frontend:** React (Vite) + NGINX
-- **Database:** MySQL 8
-- **Authentication:** JWT (JSON Web Token)
-- **Containerization:** Docker & Docker Compose
-- **Cloud Storage:** AWS S3 (Product Images)
-- **Payment Gateway:** Razorpay API (UPI & Online Payments)
+| Layer        | Technology Used |
+|-------------|-----------------|
+| Backend     | Spring Boot (Java 17) |
+| Frontend    | React (Vite) + NGINX |
+| Database    | MySQL 8 |
+| Auth        | JWT (JSON Web Token) |
+| Payments    | Razorpay API (UPI & Online) |
+| Storage     | AWS S3 (Product Images) |
+| DevOps      | Docker & Docker Compose |
 
 ---
 
-## 🧱 Architecture Overview
+## 🧱 Architecture
 
-- REST APIs used for frontend-backend communication
-- Layered architecture:
+- RESTful API communication
+- Layered Architecture:
   - Controller Layer
   - Service Layer
   - Repository Layer
-- Separate service modules for:
-  - Admin
-  - Customer
-- JWT-based authentication and authorization
-- MySQL for transactional data
-- AWS S3 for storing product images
-- Docker Compose manages backend, frontend, and database containers
+- JWT-based Authentication & Authorization
+- Separate modules for:
+  - 👤 Customer Services
+  - 🛠️ Admin Services
+- AWS S3 for image storage
+- Docker Compose for multi-container orchestration
 
 ---
 
@@ -40,123 +43,189 @@ It demonstrates real-world eCommerce functionality including authentication, car
 
 - User Registration & Login
 - JWT Authentication
-- View Products
-- Category Filtering
-- Add Products to Cart
+- View & Filter Products
+- Add to Cart
 - Place Orders
-- Multiple Payment Options:
-  - UPI
-  - Razorpay Payment Gateway
-- Order Tracking
+- Razorpay Payment Integration
+- UPI & Online Payments
+- Order History Tracking
 
 ---
 
 ## 🛠️ Admin Features
 
-- Add New Products
-- Modify Product Cost
-- Upload Product Images (Stored in AWS S3)
-- View Monthly Sales
-- Track Customer Purchases
-- Monitor Sales Growth Over Time
-- Business Performance Analytics Dashboard
+- Add / Update Products
+- Modify Pricing
+- Upload Product Images (AWS S3)
+- Monthly Sales Monitoring
+- Customer Purchase Insights
+- Sales Growth Analytics Dashboard
+
+---
+
+# 📸 Project Screenshots
+
+---
+
+## 🔐 Admin Module
+
+### Admin Login
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Soumyajit-Paramanick/SalesSavvy/main/screenshots/admin_login.png" width="75%" />
+</p>
+
+### Admin Dashboard
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Soumyajit-Paramanick/SalesSavvy/main/screenshots/admindashboard1.png" width="45%" />
+  <img src="https://raw.githubusercontent.com/Soumyajit-Paramanick/SalesSavvy/main/screenshots/admindashboard2.png" width="45%" />
+</p>
+
+---
+
+## 👤 Customer Module
+
+### Registration & Login
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Soumyajit-Paramanick/SalesSavvy/main/screenshots/customer_registration.png" width="45%" />
+  <img src="https://raw.githubusercontent.com/Soumyajit-Paramanick/SalesSavvy/main/screenshots/customer_login.png" width="45%" />
+</p>
+
+### Customer Home
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Soumyajit-Paramanick/SalesSavvy/main/screenshots/customerhome.png" width="75%" />
+</p>
+
+### Cart & Orders
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Soumyajit-Paramanick/SalesSavvy/main/screenshots/UserCartPage.png" width="45%" />
+  <img src="https://raw.githubusercontent.com/Soumyajit-Paramanick/SalesSavvy/main/screenshots/order_history.png" width="45%" />
+</p>
+
+---
+
+## 💳 Payment Flow
+
+### Payment Processing
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Soumyajit-Paramanick/SalesSavvy/main/screenshots/confirming_payment.png" width="75%" />
+</p>
+
+### Successful Payment
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Soumyajit-Paramanick/SalesSavvy/main/screenshots/successfull_payment.png" width="75%" />
+</p>
+
+---
+
+## 🐳 Docker Setup
+
+### Docker Compose Running
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Soumyajit-Paramanick/SalesSavvy/main/screenshots/docker-setup.png" width="75%" />
+</p>
+
+### Docker Hub Image
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Soumyajit-Paramanick/SalesSavvy/main/screenshots/docker_hub_setup.png" width="75%" />
+</p>
 
 ---
 
 ## 🐳 Docker Images
 
-**Backend Image**
+Backend:
 ```
 soumyajitparamanick96419/salessavvy-backend:v4
 ```
 
-**Frontend Image**
+Frontend:
 ```
 soumyajitparamanick96419/salessavvy-frontend:latest
 ```
+
 ---
 
 ## 📂 Project Structure
+
 ```
 SalesSavvy/
-│
 ├── Sales_Savvy_Backend/
 ├── Sales_Savvy_Frontend/
 ├── Sales_Savvy_Database/
 ├── docker-compose.yml
 └── README.md
 ```
+
 ---
 
 # 🧪 Running The Project
 
-## 1️⃣ Clone Repository
+### 1️⃣ Clone Repository
+
 ```
 git clone https://github.com/Soumyajit-Paramanick/SalesSavvy.git
-
 cd SalesSavvy
 ```
+
 ---
 
-## 2️⃣ Clean Docker Environment (Recommended)
+### 2️⃣ Clean Docker Environment (Optional)
+
 ```
-Stop and remove containers, networks, and volumes:
-
 docker compose down -v
-
-Remove unused images:
-
 docker system prune -f
 ```
+
 ---
 
-## 3️⃣ Build & Run (Foreground Mode)
+### 3️⃣ Build & Run
 
+Foreground:
 ```
 docker compose up --build
 ```
----
 
-## 4️⃣ Run In Background (Detached Mode)
+Background:
 ```
 docker compose up -d --build
 ```
----
 
-## 5️⃣ Stop Containers
+Stop:
 ```
 docker compose down
 ```
+
 ---
 
-## 🌐 Access The Application
+## 🌐 Access Application
 
 Frontend:
-
+```
 http://localhost:5173
+```
 
 Backend API:
-
+```
 http://localhost:8080
+```
 
 ---
 
 ## 🔐 REST API Design
 
-- RESTful endpoints implemented using Spring Boot
-- Controllers handle HTTP requests
-- Service layer manages business logic
-- Repository layer interacts with MySQL
-- JWT filter secures protected endpoints
-- Separate endpoints for Admin and Customer modules
+- Spring Boot REST Controllers
+- Business Logic in Service Layer
+- Repository Layer with JPA
+- JWT Filter for secured endpoints
+- Separate Admin & Customer APIs
 
 ---
 
 ## ☁️ Cloud & Payment Integration
 
-- Product images securely stored in AWS S3 bucket
-- Payment processing handled via Razorpay API
-- Supports UPI and online payment methods
+- Product images stored securely in AWS S3
+- Razorpay API used for payment processing
+- Supports UPI & Online transactions
 - Secure backend-side payment verification
 
 ---
@@ -165,4 +234,3 @@ http://localhost:8080
 
 **Soumyajit Paramanick**  
 Full Stack Developer | Java | Spring Boot | React | Docker | AWS
-
