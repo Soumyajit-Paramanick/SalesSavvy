@@ -1,0 +1,26 @@
+# Java
+target/
+*.class
+*.log
+
+# Maven wrapper
+.mvn/
+
+# Node
+node_modules/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.env
+
+# IDE
+.idea/
+.metadata/
+.vscode/
+
+# MySQL data volume
+salessavvy_mysql_data/
